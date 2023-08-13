@@ -6,18 +6,15 @@
 * main - print alphabet in lowercase then Upper using putchar
 * Return:0
 */
-int main(void)
-{
-	char ch;
+int main() {
+    char letter = 'a';
 
-	for (ch = 'a'; ch <= 'z'; ch++)
-	{
-		putchar(ch);
-	}
-	for (ch = 'A'; ch <= 'Z'; ch++)
-	{
-		putchar(ch);
-	}
-	putchar('\n');
-	return (0);
+    while (letter <= 'z') {
+        putchar(letter);
+        letter++;
+    }
+
+    putchar('\n');
+
+    return 0;
 }
