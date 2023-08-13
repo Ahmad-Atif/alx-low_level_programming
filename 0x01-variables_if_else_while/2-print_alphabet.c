@@ -3,18 +3,23 @@
 #include <time.h>
 
 /**
-* main - print alphabet in lowercase then Upper using putchar
-* Return:0
-*/
-int main() {
+ * main - Entry point
+ *
+ * Description: Prints the lowercase alphabet followed by a new line.
+ *
+ * Return: Always 0 (Success)
+ */
+int main(void)
+{
     char letter = 'a';
 
-    while (letter <= 'z') {
+    while (letter <= 'z')
+    {
         putchar(letter);
         letter++;
     }
 
     putchar('\n');
 
-    return 0;
+    return (0);
 }
