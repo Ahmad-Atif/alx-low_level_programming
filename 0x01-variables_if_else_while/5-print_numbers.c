@@ -1,6 +1,6 @@
+#include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
-#include <stdio.h>
 
 /**
 * main - print digits of base10 system
@@ -8,11 +8,12 @@
 */
 int main(void)
 {
-	int i;
+	int d;
 
-for (i = 0; i < 10; i++)
-   {
-       printf ("%d\n" ,i);
-   {
-       return (0);
-} 
+	for (d = 0; d < 10; d++)
+	{
+		printf("%d", d);
+	}
+	putchar('\n');
+	return (0);
+}	
