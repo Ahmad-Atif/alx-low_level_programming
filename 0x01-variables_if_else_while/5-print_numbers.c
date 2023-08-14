@@ -1,19 +1,18 @@
 #include <stdio.h>
-#include <stdlib.h>
-#include <time.h>
 
 /**
-* main - print digits of base10 system
-* Return:0
-*/
+ *main -> assign a random number to the variable n each time it is executed
+ *and print the last digit of the number stored in the variable n
+ *Return: Always 0 (Success)
+ */
 int main(void)
 {
-	int d;
+int n;
 
-	for (d = 0; d < 10; d++)
-	{
-		printf("%d", d);
-	}
-	putchar('\n');
-	return (0);
-}	
+for (n = 0; n < 10; n++)
+{
+printf("%d", n);
+}
+printf("\n");
+return (0);
+}
