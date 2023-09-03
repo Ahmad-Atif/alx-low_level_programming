@@ -1,24 +1,24 @@
 #include <stdio.h>
-#include <stdlib.h>
-#include <time.h>
 
 /**
-* main - print digits of base10 followed by ', '
-* Return:0
-*/
+ * main - Prints all possible combinations of single-digit numbers.
+ *
+ * Return: Always 0.
+ */
 int main(void)
 {
-	int d;
+	int num;
 
-	for (d = 0; d < 10; d++)
+	for (num = 0; num <= 9; num++)
 	{
-		putchar(d + '0');
-		if (d < 9)
-		{
-			putchar(',');
-			putchar(' ');
-		}
+		putchar((num % 10) + '0');
+		if (num == 9)
+			continue;
+		putchar(',');
+		putchar(' ');
 	}
+
 	putchar('\n');
+
 	return (0);
 }

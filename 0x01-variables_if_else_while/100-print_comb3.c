@@ -1,32 +1,30 @@
 #include <stdio.h>
+
 /**
- * main - main block
- * Description: Print numbers from 0 to 99.
- * Numbers must be separated by commas followed by a space.
- * You can only use `putchar` to print to console.
- * You can only use `putchar` up to 5 times.
- * You are not allowed to use variables of type `char`.
- * Return: 0
+ * main - Prints all possible combinations of two different digits,
+ *        in ascending order, separated by a comma followed by a space.
+ *
+ * Return: Always 0.
  */
 int main(void)
 {
-	int d, first, last;
+	int digit1, digit2;
 
-	for (d = 0; d < 100; d++)
+	for (digit1 = 0; digit1 < 9; digit1++)
 	{
-		first = d / 10;
-		last = d % 10;
-
-		if (first == last || first % 10 > last)
-			continue;
-		putchar(first + '0');
-		putchar(last + '0');
-		if (d < 89)
+		for (digit2 = digit1 + 1; digit2 < 10; digit2++)
 		{
+			putchar((digit1 % 10) + '0');
+			putchar((digit2 % 10) + '0');
+
+			if (digit1 == 8 && digit2 == 9)
+				continue;
 			putchar(',');
 			putchar(' ');
 		}
 	}
+
 	putchar('\n');
+
 	return (0);
 }
